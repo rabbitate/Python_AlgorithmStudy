@@ -14,7 +14,12 @@ score = list(map(int, input().split()))
 # for stu in score:
 #     sum += stu
 
-avg = round(sum(score) / n) # 학생 평균 점수, 소수 첫째자리까지만 표기
+# avg = round(sum(score) / n) # 학생 평균 점수, 소수 첫째자리까지만 표기
+
+# 학생 평균 점수 반올림, round 함수는 round half even 방식이라 사용 안함
+
+avg = sum(score) / n + 0.5
+avg = int(avg)
 
 dif = 100
 ans = 0
