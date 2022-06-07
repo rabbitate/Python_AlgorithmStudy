@@ -4,11 +4,11 @@
 # 첫 번째 줄에는 자연수 N과 M이 주어집니다. N과 M은 4, 6, 8, 12, 20 중의 하나입니다.
 
 import sys
-# sys.stdin = open("in1.txt", 'r')
+sys.stdin = open("in1.txt", 'r')
 
 n, m = map(int, input().split())
 
-cnt = [0] * (n + m + 5) # 주사위 수의 합 개수를 세주는 리스트, 넉넉하게 크기 설정 후 0으로 초기화 해주었다
+cnt = [0] * (n + m + 1) # 주사위 수의 합 개수를 세주는 리스트, 눈의 합이 n+m 이상이 나올 수 없다
 
 for i in range(1,n+1):
     for j in range(1,m+1):
