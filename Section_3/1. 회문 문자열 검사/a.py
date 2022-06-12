@@ -7,7 +7,7 @@ dif = abs(ord('a')-ord('A')) # 같은 알파벳이지만 대소문자가 다를 
 
 def check(s):
     for i in range(len(s)//2): # 문자열의 절반만 검사
-        if s[i] != s[len(s)-1-i] and abs(ord(s[i]) - ord(s[len(s)-1-i])) != dif: # 같은 문자가 아니고, 대소문자 구분 없이 같은 문자가 아니라면
+        if s[i] != s[-1-i] and abs(ord(s[i]) - ord(s[-1-i])) != dif: # 같은 문자가 아니고, 대소문자 구분 없이 같은 문자가 아니라면
             print("NO") # 회문 문자열이 아니다
             break
     else:
