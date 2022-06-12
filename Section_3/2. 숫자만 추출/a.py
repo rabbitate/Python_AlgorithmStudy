@@ -12,7 +12,8 @@ s = input()
 num = ""
 
 for c in s:
-    if ord('0') <= ord(c) <= ord('9'): # 숫자라면
+    if c.isdecimal():
+    # if ord('0') <= ord(c) <= ord('9'): # 숫자라면
         if num == "" and c == '0': # 첫 자리가 0일때
             continue
         else:
