@@ -11,15 +11,18 @@ list = list(range(21)) # 편의를 위해 인덱스에 인덱스 숫자로 초�
 
 for _ in range(10):
     a,b = map(int, input().split())
-    dif = b - a
-    if dif % 2 == 0: # 구간의 카드 개수가 홀수일 때, 구간의 차는 짝수
-        for i in range(dif,0,-2):
-            list[a], list[a+i] = list[a+i], list[a]
-            a += 1
-    else: # 구간의 카드 개수가 짝수일 때, 구간의 차는 홀수
-        for i in range(dif,-1,-2):
-            list[a], list[a+i] = list[a+i], list[a]
-            a += 1
+    # dif = b - a
+    # if dif % 2 == 0: # 구간의 카드 개수가 홀수일 때, 구간의 차는 짝수
+    #     for i in range(dif,0,-2):
+    #         list[a], list[a+i] = list[a+i], list[a]
+    #         a += 1
+    # else: # 구간의 카드 개수가 짝수일 때, 구간의 차는 홀수
+    #     for i in range(dif,-1,-2):
+    #         list[a], list[a+i] = list[a+i], list[a]
+    #         a += 1
+    
+    for i in range((b-a+1)//2): # (b-a+1)//2 번 반복하면 된다
+        list[a+i], list[b-i] = list[b-i], list[a+i]
 
 list.remove(0) # 처음에 편의를 위해 넣어줬던 0 제거
 print(list)
