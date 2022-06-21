@@ -12,16 +12,31 @@ l = [list(map(int, input().split())) for _ in range(n)]
 
 total = 0 # 수확한 사과의 개수의 합
 
-# n//2번째까지 
-for i in range(n//2+1):
-    total += l[i][n//2]
-    for j in range(1,i+1):
-        total += l[i][n//2-j] + l[i][n//2+j]
+start = end = n//2 # 중간
 
-# n//2+1번째부터 n-1번째까지
-for i in range(n//2+1,n):
-    total += l[i][n//2]
-    for j in range(1,n-i):
-        total += l[i][n//2-j] + l[i][n//2+j]
+for i in range(n):
+    for j in range(start,end+1):
+        total += l[i][j]
+
+    # n//2번째까지 start-- end++
+    if i < n//2:
+        start -= 1
+        end += 1
+    # 나머지는 start++ end--
+    else: 
+        start += 1
+        end -= 1
+
+# # n//2번째까지 
+# for i in range(n//2+1):
+#     total += l[i][n//2]
+#     for j in range(1,i+1):
+#         total += l[i][n//2-j] + l[i][n//2+j]
+
+# # n//2+1번째부터 n-1번째까지
+# for i in range(n//2+1,n):
+#     total += l[i][n//2]
+#     for j in range(1,n-i):
+#         total += l[i][n//2-j] + l[i][n//2+j]
 
 print(total)
