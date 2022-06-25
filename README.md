@@ -5,4 +5,7 @@ https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%E
 
 파이썬 알고리즘 문제풀이 (코딩테스트 대비)를 수강하며 풀이한 알고리즘 문제들을 업로드
 
-language: python
+<p>
+  <b>Language:</b>
+<img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+</p>
