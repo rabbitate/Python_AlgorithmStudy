@@ -9,17 +9,12 @@ sys.stdin = open("in5.txt", 'r')
 
 s = input()
 
-num = ""
+num = 0
 
 for c in s:
     if c.isdecimal():
     # if ord('0') <= ord(c) <= ord('9'): # 숫자라면
-        if num == "" and c == '0': # 첫 자리가 0일때
-            continue
-        else:
-            num += c
-
-num = int(num)
+        num = num*10 + int(c)
 
 print(num)
 
