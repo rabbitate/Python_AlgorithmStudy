@@ -29,7 +29,7 @@ n, m = map(int, input().split()) # 곡 수(n), 저장하려는 DVD 개수(m)
 
 song = list(map(int, input().split())) # 곡 길이 리스트
 
-lc = 1 # left cursor
+lc = max(song) # left cursor, 한 곡을 잘라서 DVD에 넣을 수 없으므로, DVD의 최소 용량은 제일 긴 곡의 길이가 되어야한다
 rc = sum(song) # right cursor
 
 res = 0 # DVD 최소 용량
