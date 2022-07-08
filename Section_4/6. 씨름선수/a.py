@@ -15,17 +15,15 @@ player = []
 for _ in range(n):
     player.append(list(map(int, input().split())))
 
-player.sort(key=lambda x:-x[0]) # 키 내림차순으로 정렬
+player.sort(key=lambda x:-x[0]) # 키 내림차순으로 정렬, player.sort(reverse=True)와 같다
 
-cnt = n # 씨름 선수 인원
+cnt = 0 # 씨름 선수 인원
 
-cal = [True for _ in range(n)] # 계산했는지를 확인하는 리스트
+maxweight = 0 # 몸무게 최대값
 
-for i in range(n):
-    weight = player[i][1]
-    for j in range(i,n):
-        if weight > player[j][1] and cal[j]: # 계산을 안한 선수 중 탈락 조건인 선수라면
-            cnt -= 1
-            cal[j] = False
+for p in player:
+    if p[1] > maxweight: # p 선수의 몸무게가 그 전 선수들 몸무게보다 많을 경우
+        cnt += 1
+        maxweight = p[1] # 몸무게 최대값 갱신
 
 print(cnt)
