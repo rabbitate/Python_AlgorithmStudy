@@ -19,7 +19,7 @@ before = 0 # 비교되는 숫자
 newNum = [] # 증가수열을 저장하는 리스트
 s = ""
 
-while True:
+while start<=end:
     # start 와 end의 수가 before보다 작다면 증가수열 완성
     if num[start] < before and num[end] < before:
         break
