@@ -13,7 +13,6 @@ sys.stdin = open("in5.txt", 'r')
 
 status = list(input()) # 쇠막대기와 레이저의 배치를 나타내는 괄호 표현
 
-stick = 0 # 추가할 쇠막대기 개수
 stack = [] # 
 sum = 0 # 쇠막대기 총 개수
 
